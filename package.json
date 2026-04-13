@@ -1,8 +1,7 @@
 {
   "name": "rapha-selfcare",
   "version": "1.0.0",
-  "description": "Node.js app for Rapha Self-Care website.",
-  "main": "server.js",
+  "description": "Rapha Self-Care – luxury self-care brand website built with Next.js.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,19 +14,14 @@
   "keywords": [
     "rapha",
     "selfcare",
-    "express"
+    "nextjs"
   ],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Lordsi/Rapha-self-care/issues"
-  },
-  "homepage": "https://github.com/Lordsi/Rapha-self-care#readme",
   "engines": {
     "node": ">=18"
   },
   "dependencies": {
-    "express": "^5.2.1",
     "next": "^16.2.3",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
