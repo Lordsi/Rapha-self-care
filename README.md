@@ -32,3 +32,19 @@ This repo is ready for **static hosting** (no build step). Site files live at th
 ## Repository
 
 Remote: `https://github.com/Lordsi/Rapha-self-care.git`
+
+### First-time push from your computer
+
+Git is initialized on `main` with `origin` set to the URL above. If automated push fails (large assets, slow network), open a terminal in this folder and run:
+
+```bash
+git config http.postBuffer 524288000
+git push -u origin main
+```
+
+Sign in to GitHub when prompted (browser or [personal access token](https://github.com/settings/tokens) with `repo` scope). SSH users can run:
+
+```bash
+git remote set-url origin git@github.com:Lordsi/Rapha-self-care.git
+git push -u origin main
+```
