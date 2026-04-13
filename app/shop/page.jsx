@@ -73,11 +73,6 @@ export default function Shop() {
                     <div className={styles.price}>R{p.price}</div>
                     <div className={styles.actions}>
                       <Link href={`/checkout?add=${p.id}`} className="btn">Add to Cart</Link>
-                      {p.pdfs && p.pdfs.map((pdf, i) => (
-                        <a key={i} href={pdf.url} className={styles.btnPdf} target="_blank" rel="noopener noreferrer">
-                          {pdf.label} (PDF)
-                        </a>
-                      ))}
                     </div>
                   </div>
                 </article>

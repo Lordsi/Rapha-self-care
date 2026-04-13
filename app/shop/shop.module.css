@@ -52,13 +52,6 @@
 .actions { display: flex; flex-direction: column; gap: 0.5rem; }
 .actions .btn { width: 100%; padding: 0.65rem; font-size: 0.8rem; }
 
-.btnPdf {
-  display: inline-flex; align-items: center; justify-content: center; width: 100%;
-  padding: 0.55rem 0.65rem; font-size: 0.75rem; font-weight: 600; text-decoration: none;
-  color: var(--text-brown); background: rgba(255,255,255,0.85); border: 1px solid var(--pink-blush);
-  border-radius: var(--radius-btn); transition: background 0.2s, border-color 0.2s;
-}
-.btnPdf:hover { background: var(--white); border-color: var(--rose-gold); }
 
 @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } .filters { display: none; } }
 @media (max-width: 700px) {
