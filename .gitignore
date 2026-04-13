@@ -19,3 +19,5 @@ npm-debug.log*
 
 # Node
 node_modules/
+.next/
+.env.local

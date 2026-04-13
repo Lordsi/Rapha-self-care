@@ -1,0 +1,28 @@
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+.heroContent h1 {
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 20px rgba(255,255,255,0.5);
+}
+.heroContent .btn { margin-top: 0.5rem; }
+
+@media (max-width: 768px) {
+  .hero { min-height: 75vh; padding: 2rem 1rem; }
+  .heroContent h1 { margin-bottom: 1.25rem; }
+}
+@media (max-width: 480px) {
+  .hero { min-height: 70vh; padding: 1.5rem 0.75rem; }
+}
