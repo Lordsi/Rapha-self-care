@@ -23,7 +23,7 @@ function CheckoutContent() {
           <div className={styles.cartItems}>
             <div className="card">
               <div className={styles.cartItem}>
-                <img src={item.img} alt={item.name} />
+                <img src={item.img} alt={item.name} loading="lazy" decoding="async" />
                 <div className={styles.details}>
                   <div className={styles.name}>{item.name}</div>
                   <div className={styles.meta}>{item.label} · Qty 1</div>

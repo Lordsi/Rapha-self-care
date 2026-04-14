@@ -18,9 +18,11 @@ const TYPES = [
 ];
 
 export default function Shop() {
+  const PRICE_MIN = Math.floor(Math.min(...products.map((p) => p.price)));
+  const PRICE_MAX = Math.ceil(Math.max(...products.map((p) => p.price)));
   const [typeFilter, setTypeFilter] = useState('all');
-  const [minPrice, setMinPrice] = useState(120);
-  const [maxPrice, setMaxPrice] = useState(3500);
+  const [minPrice, setMinPrice] = useState(PRICE_MIN);
+  const [maxPrice, setMaxPrice] = useState(PRICE_MAX);
 
   const filtered = useMemo(() =>
     products.filter(p =>
@@ -52,8 +54,8 @@ export default function Shop() {
             <div className={styles.filterGroup}>
               <h3 className="font-script">By Price</h3>
               <div className={styles.priceRange}>
-                <input type="range" min={120} max={3500} step={50} value={minPrice} onChange={e => setMinPrice(+e.target.value)} />
-                <input type="range" min={120} max={3500} step={50} value={maxPrice} onChange={e => setMaxPrice(+e.target.value)} />
+                <input type="range" min={PRICE_MIN} max={PRICE_MAX} step={1} value={minPrice} onChange={e => setMinPrice(+e.target.value)} />
+                <input type="range" min={PRICE_MIN} max={PRICE_MAX} step={1} value={maxPrice} onChange={e => setMaxPrice(+e.target.value)} />
                 <div className={styles.priceLabels}><span>R{minPrice}</span><span>R{maxPrice}</span></div>
               </div>
             </div>
@@ -65,7 +67,7 @@ export default function Shop() {
                 <article key={p.id} className={styles.card}>
                   <div className={styles.imgWrap}>
                     <div className={styles.desc}>{p.description}</div>
-                    <img src={p.img} alt={p.name} />
+                    <img src={p.img} alt={p.name} loading="lazy" decoding="async" />
                   </div>
                   <div className={styles.info}>
                     <div className={styles.name}>{p.name}</div>

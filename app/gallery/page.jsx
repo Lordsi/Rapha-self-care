@@ -1,5 +1,4 @@
 import styles from './gallery.module.css';
-import Image from 'next/image';
 
 export const metadata = { title: 'Gallery – Rapha Self-Care' };
 
@@ -23,7 +22,7 @@ export default function Gallery() {
       <div className={styles.grid}>
         {images.map((img) => (
           <div key={img.src} className={`${styles.item} ${img.wide ? styles.wide : ''}`}>
-            <img src={img.src} alt={img.alt} />
+            <img src={img.src} alt={img.alt}  loading="lazy" decoding="async" />
             <span className={styles.caption}>{img.caption}</span>
           </div>
         ))}

@@ -64,7 +64,7 @@ export default function About() {
           <div className={styles.triggers}>
             {triggers.map(t => (
               <button key={`${t.id}-${t.type}`} className={styles.trigger} onClick={() => setModal(t.id)}>
-                <img src={t.img} alt={t.name} />
+                <img src={t.img} alt={t.name} loading="lazy" decoding="async" />
                 <div className={styles.triggerName}>{t.name}</div>
                 <div className={styles.triggerType}>{t.type}</div>
               </button>
@@ -77,7 +77,7 @@ export default function About() {
         <div className={styles.overlay} role="dialog" aria-modal="true" aria-labelledby="modal-title" onClick={e => e.target === e.currentTarget && setModal(null)}>
           <div className={styles.modalCard}>
             <button className={styles.close} onClick={() => setModal(null)} aria-label="Close">&times;</button>
-            <img className={styles.modalImg} src={p.img} alt={p.title} />
+            <img className={styles.modalImg} src={p.img} alt={p.title} loading="lazy" decoding="async" />
             <div className={styles.modalBody}>
               <h3 className={`font-script ${styles.modalTitle}`} id="modal-title">{p.title}</h3>
               <p className={styles.modalSubtitle}>{p.subtitle}</p>

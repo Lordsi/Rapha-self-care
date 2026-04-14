@@ -21,7 +21,7 @@
 .priceRange input[type="range"] { width: 100%; accent-color: var(--pink-btn); margin: 0.5rem 0; }
 .priceLabels { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); }
 
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 
 .card {
   position: relative; background: rgba(255,255,255,0.9); border-radius: var(--radius);
@@ -30,10 +30,12 @@
 .card:hover { box-shadow: var(--shadow-card); transform: translateY(-2px); }
 
 .imgWrap {
-  position: relative; aspect-ratio: 1; background: var(--pink-soft);
-  display: flex; align-items: center; justify-content: center; padding: 1rem; overflow: hidden;
+  position: relative; aspect-ratio: 1;
+  background: var(--pink-soft);
+  display: flex; align-items: center; justify-content: center;
+  padding: 0.35rem; overflow: hidden;
 }
-.imgWrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.imgWrap img { width: 100%; height: 100%; object-fit: cover; }
 
 .desc {
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
@@ -65,6 +67,6 @@
 }
 @media (max-width: 480px) {
   .grid { grid-template-columns: 1fr; gap: 1.25rem; }
-  .imgWrap { padding: 0.75rem; }
+  .imgWrap { padding: 0.35rem; }
   .desc { padding: 1rem; font-size: 0.8rem; }
 }
